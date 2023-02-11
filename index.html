@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>#운크시그니처</title>
+	<style>
+    /* 이서윤체 폰트 적용을 위한 코드 */
+    @font-face {
+      font-family: "LeeSeoyun";
+      src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2202-2@1.0/LeeSeoyun.woff")
+        format("woff");
+      font-weight: normal;
+      font-style: normal;
+    }
+    /* body태그 자체에 css 요소 부여 */
+body {
+	font-family: "LeeSeoyun";
+	margin: 0;
+	display: flex;
+	justify-content: center;
+	background-image: url("./background.png");
+}
+/* 너비는 390픽셀이구, 배경색이 좀 필요하고 부모(body) 높이 전체를 쓸거야 */
+
+.container {
+	width: 390px;
+	background-color: #ff9d73;
+	height: 100%;
+}
+/* 위로 여유가 30픽셀 정도 있었으면 좋겠네 */
+
+.photos {
+	margin-top: 30px;
+}
+/* 배경은 알아보기 쉽게 흰색으로 해주고, 좌우 마진은 20픽셀 */
+/* 상하 마진은 15픽셀로 해줘. 높이는 각 사진마다 200 픽셀로!*/
+
+.photo-frame {
+	background-color: white;
+	margin: 15px 20px;
+	height: 200px;
+    
+      background-size: cover;
+      position: relative;
+    }
+
+.footer {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+
+/* 아래 영역의 제목 부분은 폰트가 좀 두껍고, 사이즈는 25픽셀! 흰색으로 */
+.f-title {
+	font-size: 25px;
+	font-weight: 900;
+	color: white;
+}
+
+/* 아래 영역의 날짜 부분은 폰트가 중간 두께고, 사이즈는 15픽셀! 흰색으로 */
+.f-date {
+	font-size: 15px;
+	font-weight: 500;
+	color: white;
+}
+#image1 {
+	background-image: url("./1.png");
+}
+#image4 {
+	background-image: url("./2.jpg");
+}
+#image2 {
+	background-image: url("./3.jpg");
+}
+#image3 {
+	background-image: url("./4.jpg");
+}
+.photo-description {
+	/* 배경은 검게, 글자는 흰 색으로 */
+	color: white;
+	background-color: black;
+
+	/* 가로 너비는 내부 콘텐츠에 딱 맞게! */
+	width: fit-content;
+	padding: 0 20px;
+	margin-bottom: 10px;
+
+	/* 경계선 */
+	border-radius: 10px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+}
+
+	</style>
+</head>
+<body>
+    <div class="container">
+			<div class="photos">
+	      <div id="image1" class="photo-frame">
+					<span id="desc1" class="photo-description">
+						MKYU칼리지 모집(~1/31) >
+					</span>
+				</div>
+	      <div id="image2" class="photo-frame">
+					<span id="desc2" class="photo-description">
+						NOTION__________자료실&인증게시판
+					</span>
+				</div>
+	      <div id="image3" class="photo-frame">
+					<span id="desc3" class="photo-description">
+						카페__운영
+					</span>
+				</div>
+	      <div id="image4" class="photo-frame">
+					<span id="desc4" class="photo-description">
+						시그니처 이후__ZEP 습관챌린지 연계
+					</span>
+				</div>
+			</div>
+			<div class="footer">
+				<p class="f-title">  기록&정리 1014시그니처</p>
+			  <p class="f-date"> 2023.01.25~02.07 정재연(운크)@customnpo</p>
+			</div>
+    </div>
+</body>
+</html>
